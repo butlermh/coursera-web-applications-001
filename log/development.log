@@ -12,3 +12,49 @@ Migrating to CreateComments (20140401141605)
   [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140401141605"]]
   [1m[36m (295.0ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 07:26:38 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/mark/.rvm/gems/ruby-2.1.0/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 33ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-04-01 07:26:42 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1266ms (Views: 1261.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 07:26:43 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-01 07:26:43 -0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-04-01 07:26:43 -0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-04-01 07:26:43 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 07:26:43 -0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-04-01 07:26:43 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 07:26:43 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 07:26:43 -0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-04-01 07:26:43 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 07:26:43 -0700
